@@ -1,0 +1,30 @@
+# Dataset (202k CelebA images, local only - never commit)
+img_align_celeba/
+img_align_celeba.zip
+celeba/
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Model checkpoints / outputs
+*.pt
+*.pth
+*.ckpt
+generated/
+outputs/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

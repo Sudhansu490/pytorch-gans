@@ -1,0 +1,29 @@
+[project]
+name = "pytorch-gans"
+version = "0.1.0"
+description = "Vanilla GAN (and upcoming DCGAN) on CelebA with PyTorch"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "GAN Learner" }]
+keywords = ["gan", "pytorch", "celeba", "generative-ai"]
+dependencies = [
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+notebook = [
+  "jupyter>=1.0",
+  "ipykernel>=6.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["img_align_celeba*"]
