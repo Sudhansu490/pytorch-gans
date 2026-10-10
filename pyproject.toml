@@ -1,7 +1,7 @@
 [project]
 name = "pytorch-gans"
 version = "0.1.0"
-description = "Vanilla GAN (and upcoming DCGAN) on CelebA with PyTorch"
+description = "Vanilla GAN and DCGAN on CelebA with PyTorch"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

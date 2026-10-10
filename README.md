@@ -1,11 +1,11 @@
 # pytorch-gans
 
-Vanilla GAN (MLP Generator + Discriminator) on CelebA with PyTorch. DCGAN coming next in the same repo.
+Vanilla GAN (MLP Generator + Discriminator) and DCGAN (convolutional) on CelebA with PyTorch.
 
 ## Notebooks
 
-- `vanilla_gan.ipynb` — vanilla GAN, 64x64 CelebA, BCELoss, Adam(lr=0.0002, betas=(0.5, 0.999)), z_dim=100, batch_size=128
-- `dcgan.ipynb` — planned (convolutional Generator/Discriminator)
+- `1_Vanilla_GAN.ipynb` — vanilla GAN, 64x64 CelebA, BCELoss, Adam(lr=0.0002, betas=(0.5, 0.999)), z_dim=100, batch_size=128
+- `2_DCGAN.ipynb` — DCGAN (convolutional Generator/Discriminator), 64x64 CelebA, BCELoss, Adam(lr=0.0002, betas=(0.5, 0.999)), z_dim=100, batch_size=32, subset-friendly for CPU
 
 ## Dataset setup (not committed)
 
@@ -16,8 +16,8 @@ Download CelebA aligned faces (`img_align_celeba`, 202599 images) from Kaggle an
 
 ```
 pytorch-gans/
-├── vanilla_gan.ipynb
-├── dcgan.ipynb
+├── 1_Vanilla_GAN.ipynb
+├── 2_DCGAN.ipynb
 ├── pyproject.toml
 ├── README.md
 └── img_align_celeba/   # git-ignored, local only
@@ -42,8 +42,9 @@ pip install -e ".[notebook]"
 ## Run
 
 ```bash
-jupyter notebook vanilla_gan.ipynb
+jupyter notebook 1_Vanilla_GAN.ipynb
 # Run All top-to-bottom: dataset -> dataloader -> models -> train(epochs=5)
+# DCGAN: jupyter notebook 2_DCGAN.ipynb (start with SUBSET_SIZE=10000 on CPU)
 ```
 
 Training prints `G-loss / D-loss` every 50 batches and shows one 8-image grid per epoch.
